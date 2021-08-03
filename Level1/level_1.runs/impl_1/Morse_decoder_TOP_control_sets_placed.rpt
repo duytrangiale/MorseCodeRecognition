@@ -1,0 +1,92 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue May 12 14:11:54 2020
+| Host         : GIA-DUY running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Morse_decoder_TOP_control_sets_placed.rpt
+| Design       : Morse_decoder_TOP
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    14 |
+|    Minimum number of control sets                        |    14 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    54 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    14 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              35 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             102 |           28 |
+| Yes          | No                    | No                     |               6 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              27 |            5 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+--------------------------------+--------------------------------------------+------------------+----------------+
+|           Clock Signal           |          Enable Signal         |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++----------------------------------+--------------------------------+--------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG                   | db/debouncebeat/beat           |                                            |                1 |              1 |
+|  clk_IBUF_BUFG                   |                                | sevensegDisp/ssdAnode[3]_i_1_n_0           |                1 |              4 |
+|  clk_IBUF_BUFG                   |                                | keyproc/led[7]_i_1_n_0                     |                2 |              5 |
+|  clk_IBUF_BUFG                   | enableDisp_IBUF                |                                            |                3 |              5 |
+|  clk_IBUF_BUFG                   | codecompare/next               | keyproc/SR[0]                              |                1 |              5 |
+|  clk_IBUF_BUFG                   |                                | keyproc/SR[0]                              |                2 |              7 |
+|  clk_IBUF_BUFG                   | keyproc/morseCode[7]_i_2_n_0   | keyproc/morseCode[7]_i_1_n_0               |                2 |              8 |
+|  codecompare/addr_reg[4]_i_1_n_0 |                                |                                            |                4 |             10 |
+|  clk_IBUF_BUFG                   | keyproc/morseArray[15]_i_2_n_0 | keyproc/morseArray[15]_i_1_n_0             |                2 |             14 |
+|  clk_IBUF_BUFG                   |                                | db/debouncebeat/count[0]_i_1_n_0           |                4 |             15 |
+|  clk_IBUF_BUFG                   |                                | sevensegDisp/inst_beat/count[0]_i_1__3_n_0 |                5 |             17 |
+|  clk_IBUF_BUFG                   |                                |                                            |               10 |             25 |
+|  clk_IBUF_BUFG                   |                                | keyproc/hb1/count[0]_i_1__0_n_0            |                7 |             27 |
+|  clk_IBUF_BUFG                   |                                | keyproc/spaceTime/hb/count[0]_i_1__1_n_0   |                7 |             27 |
++----------------------------------+--------------------------------+--------------------------------------------+------------------+----------------+
+
+

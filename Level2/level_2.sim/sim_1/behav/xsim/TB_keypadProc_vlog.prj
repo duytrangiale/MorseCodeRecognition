@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Assignment_level_2.srcs/sources_1/imports/Activity1/heartbeat.v" \
+"../../../../Assignment_level_2.srcs/sources_1/new/keyProcessor.v" \
+"../../../../Assignment_level_2.srcs/sources_1/new/waitCounter.v" \
+"../../../../Assignment_level_2.srcs/sim_1/new/TB_keypadProc.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

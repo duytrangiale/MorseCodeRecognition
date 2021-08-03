@@ -1,0 +1,105 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue May 12 11:14:42 2020
+| Host         : GIA-DUY running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Morse_decoder_TOP_control_sets_placed.rpt
+| Design       : Morse_decoder_TOP
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    27 |
+|    Minimum number of control sets                        |    27 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    94 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    27 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     3 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              49 |           16 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             166 |           46 |
+| Yes          | No                    | No                     |              16 |           12 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              83 |           19 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------------------+----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|                        Clock Signal                       |                       Enable Signal                      |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------+----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG                                            |                                                          | keyproc/restart3                                 |                1 |              1 |
+|  clk_IBUF_BUFG                                            | east_db/debouncebeat/beat                                |                                                  |                1 |              1 |
+|  clk_IBUF_BUFG                                            | enter_db/debouncebeat/beat                               |                                                  |                1 |              1 |
+|  clk_IBUF_BUFG                                            | west_db/debouncebeat/beat                                |                                                  |                1 |              1 |
+|  sevensegmentdisp/FSM_sequential_nextstate_reg[3]_i_2_n_0 |                                                          |                                                  |                1 |              4 |
+|  clk_IBUF_BUFG                                            |                                                          | sevensegmentdisp/FSM_sequential_state[3]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG                                            | keyproc/spaceTime/hb/E[0]                                | keyproc/SR[0]                                    |                1 |              4 |
+|  clk_IBUF_BUFG                                            | codecompare/waitTime/hb/E[0]                             | codecompare/restart3                             |                1 |              4 |
+|  clk_IBUF_BUFG                                            | sevensegmentdisp/FSM_sequential_nextstate_reg[3]_i_2_n_0 | sevensegmentdisp/ssdAnode[3]_i_1_n_0             |                1 |              4 |
+|  clk_IBUF_BUFG                                            |                                                          | keyproc/led[7]_i_1_n_0                           |                1 |              5 |
+|  clk_IBUF_BUFG                                            | codecompare/next                                         | keyproc/SS[0]                                    |                1 |              5 |
+|  clk_IBUF_BUFG                                            | enableDisp_IBUF                                          |                                                  |                5 |              5 |
+|  clk_IBUF_BUFG                                            | keyproc/morseArray[13]_i_2_n_0                           | keyproc/morseArray[13]_i_1_n_0                   |                2 |              6 |
+|  clk_IBUF_BUFG                                            | keyproc/morseArray[13]_i_2_n_0                           | keyproc/morseArray[15]_i_1_n_0                   |                2 |              8 |
+|  clk_IBUF_BUFG                                            | keyproc/morseCode[7]_i_1_n_0                             |                                                  |                4 |              8 |
+|  codecompare/addr_reg[4]_i_1_n_0                          |                                                          |                                                  |                4 |             13 |
+|  clk_IBUF_BUFG                                            |                                                          | keyproc/SS[0]                                    |                5 |             13 |
+|  clk_IBUF_BUFG                                            |                                                          | east_db/debouncebeat/count[0]_i_1__1_n_0         |                4 |             15 |
+|  clk_IBUF_BUFG                                            |                                                          | enter_db/debouncebeat/count[0]_i_1_n_0           |                4 |             15 |
+|  clk_IBUF_BUFG                                            |                                                          | west_db/debouncebeat/count[0]_i_1__0_n_0         |                4 |             15 |
+|  clk_IBUF_BUFG                                            |                                                          | sevensegmentdisp/inst_beat/count[0]_i_1__2_n_0   |                5 |             17 |
+|  clk_IBUF_BUFG                                            | keyproc/E[0]                                             | codecompare/waitTime/SR[0]                       |                4 |             20 |
+|  clk_IBUF_BUFG                                            |                                                          | keyproc/hb1/count[0]_i_1__4_n_0                  |                7 |             27 |
+|  clk_IBUF_BUFG                                            |                                                          | keyproc/spaceTime/hb/count[0]_i_1__6_n_0         |                7 |             27 |
+|  clk_IBUF_BUFG                                            |                                                          | codecompare/waitTime/hb/count[0]_i_1__5_n_0      |                7 |             27 |
+|  clk_IBUF_BUFG                                            |                                                          |                                                  |               11 |             32 |
+|  clk_IBUF_BUFG                                            | keyproc/morseCodeWord[31]_i_2_n_0                        | keyproc/spaceTime/SR[0]                          |                7 |             32 |
++-----------------------------------------------------------+----------------------------------------------------------+--------------------------------------------------+------------------+----------------+
+
+

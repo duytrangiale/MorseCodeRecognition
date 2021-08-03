@@ -1,0 +1,1323 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue May 12 11:15:02 2020
+| Host         : GIA-DUY running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Morse_decoder_TOP_timing_summary_routed.rpt -pb Morse_decoder_TOP_timing_summary_routed.pb -rpx Morse_decoder_TOP_timing_summary_routed.rpx -warn_on_violation
+| Design       : Morse_decoder_TOP
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 13 register/latch pins with no clock driven by root clock pin: codecompare/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: codecompare/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 13 register/latch pins with no clock driven by root clock pin: codecompare/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: sevensegmentdisp/FSM_sequential_state_reg[0]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: sevensegmentdisp/FSM_sequential_state_reg[1]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: sevensegmentdisp/FSM_sequential_state_reg[2]/Q (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: sevensegmentdisp/FSM_sequential_state_reg[3]/Q (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 17 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 8 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 20 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.684        0.000                      0                  612        0.138        0.000                      0                  612        4.500        0.000                       0                   298  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                 4.684        0.000                      0                  612        0.138        0.000                      0                  612        4.500        0.000                       0                   298  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.684ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.138ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.684ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[23]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.519ns  (logic 0.918ns (20.316%)  route 3.601ns (79.684%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.782ns = ( 14.782 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.687     9.605    keyproc/morseCodeWord_2
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[23]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.441    14.782    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[23]/C
+                         clock pessimism              0.274    15.056    
+                         clock uncertainty           -0.035    15.021    
+    SLICE_X42Y15         FDRE (Setup_fdre_C_R)       -0.732    14.289    keyproc/morseCodeWord_reg[23]
+  -------------------------------------------------------------------
+                         required time                         14.289    
+                         arrival time                          -9.605    
+  -------------------------------------------------------------------
+                         slack                                  4.684    
+
+Slack (MET) :             4.684ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[27]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.519ns  (logic 0.918ns (20.316%)  route 3.601ns (79.684%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.782ns = ( 14.782 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.687     9.605    keyproc/morseCodeWord_2
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[27]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.441    14.782    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[27]/C
+                         clock pessimism              0.274    15.056    
+                         clock uncertainty           -0.035    15.021    
+    SLICE_X42Y15         FDRE (Setup_fdre_C_R)       -0.732    14.289    keyproc/morseCodeWord_reg[27]
+  -------------------------------------------------------------------
+                         required time                         14.289    
+                         arrival time                          -9.605    
+  -------------------------------------------------------------------
+                         slack                                  4.684    
+
+Slack (MET) :             4.684ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[31]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.519ns  (logic 0.918ns (20.316%)  route 3.601ns (79.684%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.782ns = ( 14.782 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.687     9.605    keyproc/morseCodeWord_2
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[31]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.441    14.782    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y15         FDRE                                         r  keyproc/morseCodeWord_reg[31]/C
+                         clock pessimism              0.274    15.056    
+                         clock uncertainty           -0.035    15.021    
+    SLICE_X42Y15         FDRE (Setup_fdre_C_R)       -0.732    14.289    keyproc/morseCodeWord_reg[31]
+  -------------------------------------------------------------------
+                         required time                         14.289    
+                         arrival time                          -9.605    
+  -------------------------------------------------------------------
+                         slack                                  4.684    
+
+Slack (MET) :             4.734ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.453ns  (logic 0.918ns (20.613%)  route 3.535ns (79.387%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.045ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.621     9.540    keyproc/morseCodeWord_2
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.440    14.781    keyproc/clk_IBUF_BUFG
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[0]/C
+                         clock pessimism              0.260    15.041    
+                         clock uncertainty           -0.035    15.006    
+    SLICE_X38Y14         FDRE (Setup_fdre_C_R)       -0.732    14.274    keyproc/morseCodeWord_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.274    
+                         arrival time                          -9.540    
+  -------------------------------------------------------------------
+                         slack                                  4.734    
+
+Slack (MET) :             4.734ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[16]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.453ns  (logic 0.918ns (20.613%)  route 3.535ns (79.387%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.045ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.621     9.540    keyproc/morseCodeWord_2
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[16]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.440    14.781    keyproc/clk_IBUF_BUFG
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[16]/C
+                         clock pessimism              0.260    15.041    
+                         clock uncertainty           -0.035    15.006    
+    SLICE_X38Y14         FDRE (Setup_fdre_C_R)       -0.732    14.274    keyproc/morseCodeWord_reg[16]
+  -------------------------------------------------------------------
+                         required time                         14.274    
+                         arrival time                          -9.540    
+  -------------------------------------------------------------------
+                         slack                                  4.734    
+
+Slack (MET) :             4.734ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[8]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.453ns  (logic 0.918ns (20.613%)  route 3.535ns (79.387%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.045ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.781ns = ( 14.781 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.260ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.621     9.540    keyproc/morseCodeWord_2
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[8]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.440    14.781    keyproc/clk_IBUF_BUFG
+    SLICE_X38Y14         FDRE                                         r  keyproc/morseCodeWord_reg[8]/C
+                         clock pessimism              0.260    15.041    
+                         clock uncertainty           -0.035    15.006    
+    SLICE_X38Y14         FDRE (Setup_fdre_C_R)       -0.732    14.274    keyproc/morseCodeWord_reg[8]
+  -------------------------------------------------------------------
+                         required time                         14.274    
+                         arrival time                          -9.540    
+  -------------------------------------------------------------------
+                         slack                                  4.734    
+
+Slack (MET) :             4.824ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[14]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.380ns  (logic 0.918ns (20.958%)  route 3.462ns (79.042%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.783ns = ( 14.783 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.548     9.466    keyproc/morseCodeWord_2
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[14]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.442    14.783    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[14]/C
+                         clock pessimism              0.274    15.057    
+                         clock uncertainty           -0.035    15.022    
+    SLICE_X42Y14         FDRE (Setup_fdre_C_R)       -0.732    14.290    keyproc/morseCodeWord_reg[14]
+  -------------------------------------------------------------------
+                         required time                         14.290    
+                         arrival time                          -9.466    
+  -------------------------------------------------------------------
+                         slack                                  4.824    
+
+Slack (MET) :             4.824ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[22]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.380ns  (logic 0.918ns (20.958%)  route 3.462ns (79.042%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.783ns = ( 14.783 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.548     9.466    keyproc/morseCodeWord_2
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[22]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.442    14.783    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[22]/C
+                         clock pessimism              0.274    15.057    
+                         clock uncertainty           -0.035    15.022    
+    SLICE_X42Y14         FDRE (Setup_fdre_C_R)       -0.732    14.290    keyproc/morseCodeWord_reg[22]
+  -------------------------------------------------------------------
+                         required time                         14.290    
+                         arrival time                          -9.466    
+  -------------------------------------------------------------------
+                         slack                                  4.824    
+
+Slack (MET) :             4.824ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[24]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.380ns  (logic 0.918ns (20.958%)  route 3.462ns (79.042%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.783ns = ( 14.783 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.548     9.466    keyproc/morseCodeWord_2
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[24]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.442    14.783    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[24]/C
+                         clock pessimism              0.274    15.057    
+                         clock uncertainty           -0.035    15.022    
+    SLICE_X42Y14         FDRE (Setup_fdre_C_R)       -0.732    14.290    keyproc/morseCodeWord_reg[24]
+  -------------------------------------------------------------------
+                         required time                         14.290    
+                         arrival time                          -9.466    
+  -------------------------------------------------------------------
+                         slack                                  4.824    
+
+Slack (MET) :             4.824ns  (required time - arrival time)
+  Source:                 keyproc/morseCode_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[30]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.380ns  (logic 0.918ns (20.958%)  route 3.462ns (79.042%))
+  Logic Levels:           3  (LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.783ns = ( 14.783 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.086ns
+    Clock Pessimism Removal (CPR):    0.274ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.967     3.425    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.565     5.086    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y8          FDRE                                         r  keyproc/morseCode_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y8          FDRE (Prop_fdre_C_Q)         0.518     5.604 f  keyproc/morseCode_reg[6]/Q
+                         net (fo=5, routed)           1.426     7.030    keyproc/morseCode[6]
+    SLICE_X42Y11         LUT6 (Prop_lut6_I1_O)        0.124     7.154 r  keyproc/word[19]_i_5/O
+                         net (fo=1, routed)           0.643     7.797    keyproc/word[19]_i_5_n_0
+    SLICE_X41Y11         LUT3 (Prop_lut3_I0_O)        0.124     7.921 r  keyproc/word[19]_i_3/O
+                         net (fo=4, routed)           0.846     8.766    keyproc/spaceTime/morseCodeWord_reg[0]
+    SLICE_X41Y13         LUT5 (Prop_lut5_I0_O)        0.152     8.918 r  keyproc/spaceTime/morseCodeWord[31]_i_1/O
+                         net (fo=32, routed)          0.548     9.466    keyproc/morseCodeWord_2
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[30]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+    W5                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.862    13.250    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         1.442    14.783    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y14         FDRE                                         r  keyproc/morseCodeWord_reg[30]/C
+                         clock pessimism              0.274    15.057    
+                         clock uncertainty           -0.035    15.022    
+    SLICE_X42Y14         FDRE (Setup_fdre_C_R)       -0.732    14.290    keyproc/morseCodeWord_reg[30]
+  -------------------------------------------------------------------
+                         required time                         14.290    
+                         arrival time                          -9.466    
+  -------------------------------------------------------------------
+                         slack                                  4.824    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.138ns  (arrival time - required time)
+  Source:                 keyproc/morseCodeWord_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.209ns  (logic 0.141ns (67.454%)  route 0.068ns (32.546%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.955ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.559     1.442    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y14         FDRE                                         r  keyproc/morseCodeWord_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y14         FDRE (Prop_fdre_C_Q)         0.141     1.583 r  keyproc/morseCodeWord_reg[1]/Q
+                         net (fo=2, routed)           0.068     1.651    keyproc/morseCodeWord_reg[28]_0[0]
+    SLICE_X41Y14         FDRE                                         r  keyproc/morseCodeWord_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.828     1.955    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y14         FDRE                                         r  keyproc/morseCodeWord_reg[9]/C
+                         clock pessimism             -0.513     1.442    
+    SLICE_X41Y14         FDRE (Hold_fdre_C_D)         0.071     1.513    keyproc/morseCodeWord_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.513    
+                         arrival time                           1.651    
+  -------------------------------------------------------------------
+                         slack                                  0.138    
+
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 keyproc/morseArray_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseArray_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.251ns  (logic 0.141ns (56.174%)  route 0.110ns (43.826%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.959ns
+    Source Clock Delay      (SCD):    1.444ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.561     1.444    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y10         FDRE                                         r  keyproc/morseArray_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y10         FDRE (Prop_fdre_C_Q)         0.141     1.585 r  keyproc/morseArray_reg[5]/Q
+                         net (fo=1, routed)           0.110     1.695    keyproc/morseArray_reg_n_0_[5]
+    SLICE_X41Y9          FDRE                                         r  keyproc/morseArray_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.832     1.959    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y9          FDRE                                         r  keyproc/morseArray_reg[7]/C
+                         clock pessimism             -0.498     1.461    
+    SLICE_X41Y9          FDRE (Hold_fdre_C_D)         0.078     1.539    keyproc/morseArray_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.539    
+                         arrival time                           1.695    
+  -------------------------------------------------------------------
+                         slack                                  0.156    
+
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 keyproc/morseArray_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseArray_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.242ns  (logic 0.141ns (58.263%)  route 0.101ns (41.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.958ns
+    Source Clock Delay      (SCD):    1.444ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.561     1.444    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y10         FDRE                                         r  keyproc/morseArray_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y10         FDRE (Prop_fdre_C_Q)         0.141     1.585 r  keyproc/morseArray_reg[13]/Q
+                         net (fo=1, routed)           0.101     1.686    keyproc/morseArray_reg_n_0_[13]
+    SLICE_X43Y10         FDRE                                         r  keyproc/morseArray_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.831     1.958    keyproc/clk_IBUF_BUFG
+    SLICE_X43Y10         FDRE                                         r  keyproc/morseArray_reg[15]/C
+                         clock pessimism             -0.498     1.460    
+    SLICE_X43Y10         FDRE (Hold_fdre_C_D)         0.070     1.530    keyproc/morseArray_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.530    
+                         arrival time                           1.686    
+  -------------------------------------------------------------------
+                         slack                                  0.156    
+
+Slack (MET) :             0.183ns  (arrival time - required time)
+  Source:                 keyproc/morseArray_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseArray_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.265ns  (logic 0.164ns (61.886%)  route 0.101ns (38.114%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.959ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.498ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.562     1.445    keyproc/clk_IBUF_BUFG
+    SLICE_X42Y9          FDRE                                         r  keyproc/morseArray_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y9          FDRE (Prop_fdre_C_Q)         0.164     1.609 r  keyproc/morseArray_reg[9]/Q
+                         net (fo=1, routed)           0.101     1.710    keyproc/morseArray_reg_n_0_[9]
+    SLICE_X41Y9          FDRE                                         r  keyproc/morseArray_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.832     1.959    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y9          FDRE                                         r  keyproc/morseArray_reg[11]/C
+                         clock pessimism             -0.498     1.461    
+    SLICE_X41Y9          FDRE (Hold_fdre_C_D)         0.066     1.527    keyproc/morseArray_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.527    
+                         arrival time                           1.710    
+  -------------------------------------------------------------------
+                         slack                                  0.183    
+
+Slack (MET) :             0.196ns  (arrival time - required time)
+  Source:                 keyproc/morseCodeWord_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/morseCodeWord_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.271ns  (logic 0.141ns (52.082%)  route 0.130ns (47.918%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.955ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.559     1.442    keyproc/clk_IBUF_BUFG
+    SLICE_X40Y14         FDRE                                         r  keyproc/morseCodeWord_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y14         FDRE (Prop_fdre_C_Q)         0.141     1.583 r  keyproc/morseCodeWord_reg[21]/Q
+                         net (fo=2, routed)           0.130     1.713    keyproc/morseCodeWord__0[21]
+    SLICE_X40Y14         FDRE                                         r  keyproc/morseCodeWord_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.828     1.955    keyproc/clk_IBUF_BUFG
+    SLICE_X40Y14         FDRE                                         r  keyproc/morseCodeWord_reg[29]/C
+                         clock pessimism             -0.513     1.442    
+    SLICE_X40Y14         FDRE (Hold_fdre_C_D)         0.075     1.517    keyproc/morseCodeWord_reg[29]
+  -------------------------------------------------------------------
+                         required time                         -1.517    
+                         arrival time                           1.713    
+  -------------------------------------------------------------------
+                         slack                                  0.196    
+
+Slack (MET) :             0.196ns  (arrival time - required time)
+  Source:                 east_db/pipeline_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            east_spot/Q_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.329ns  (logic 0.186ns (56.500%)  route 0.143ns (43.500%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.950ns
+    Source Clock Delay      (SCD):    1.440ns
+    Clock Pessimism Removal (CPR):    0.497ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.557     1.440    east_db/clk_IBUF_BUFG
+    SLICE_X36Y17         FDRE                                         r  east_db/pipeline_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y17         FDRE (Prop_fdre_C_Q)         0.141     1.581 r  east_db/pipeline_reg[0]/Q
+                         net (fo=3, routed)           0.143     1.724    east_db/pipeline_reg_n_0_[0]
+    SLICE_X38Y18         LUT3 (Prop_lut3_I0_O)        0.045     1.769 r  east_db/Q_i_1__0/O
+                         net (fo=1, routed)           0.000     1.769    east_spot/east_deb
+    SLICE_X38Y18         FDRE                                         r  east_spot/Q_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.823     1.950    east_spot/clk_IBUF_BUFG
+    SLICE_X38Y18         FDRE                                         r  east_spot/Q_reg/C
+                         clock pessimism             -0.497     1.453    
+    SLICE_X38Y18         FDRE (Hold_fdre_C_D)         0.120     1.573    east_spot/Q_reg
+  -------------------------------------------------------------------
+                         required time                         -1.573    
+                         arrival time                           1.769    
+  -------------------------------------------------------------------
+                         slack                                  0.196    
+
+Slack (MET) :             0.203ns  (arrival time - required time)
+  Source:                 keyproc/enable2_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/spaceTime/count2_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.295ns  (logic 0.227ns (77.066%)  route 0.068ns (22.934%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.956ns
+    Source Clock Delay      (SCD):    1.443ns
+    Clock Pessimism Removal (CPR):    0.513ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.560     1.443    keyproc/clk_IBUF_BUFG
+    SLICE_X41Y12         FDRE                                         r  keyproc/enable2_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y12         FDRE (Prop_fdre_C_Q)         0.128     1.571 r  keyproc/enable2_reg/Q
+                         net (fo=2, routed)           0.068     1.639    keyproc/spaceTime/count2_reg[1]_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I1_O)        0.099     1.738 r  keyproc/spaceTime/count2[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.738    keyproc/spaceTime/count2[0]_i_1_n_0
+    SLICE_X41Y12         FDRE                                         r  keyproc/spaceTime/count2_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.829     1.956    keyproc/spaceTime/clk_IBUF_BUFG
+    SLICE_X41Y12         FDRE                                         r  keyproc/spaceTime/count2_reg[0]/C
+                         clock pessimism             -0.513     1.443    
+    SLICE_X41Y12         FDRE (Hold_fdre_C_D)         0.092     1.535    keyproc/spaceTime/count2_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.535    
+                         arrival time                           1.738    
+  -------------------------------------------------------------------
+                         slack                                  0.203    
+
+Slack (MET) :             0.213ns  (arrival time - required time)
+  Source:                 keyproc/spaceTime/count1_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDSE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.317ns  (logic 0.186ns (58.636%)  route 0.131ns (41.364%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.956ns
+    Source Clock Delay      (SCD):    1.443ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.560     1.443    keyproc/spaceTime/clk_IBUF_BUFG
+    SLICE_X41Y12         FDRE                                         r  keyproc/spaceTime/count1_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y12         FDRE (Prop_fdre_C_Q)         0.141     1.584 r  keyproc/spaceTime/count1_reg[2]/Q
+                         net (fo=5, routed)           0.131     1.715    keyproc/spaceTime/count1[2]
+    SLICE_X40Y12         LUT6 (Prop_lut6_I0_O)        0.045     1.760 r  keyproc/spaceTime/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.760    keyproc/spaceTime_n_3
+    SLICE_X40Y12         FDSE                                         r  keyproc/FSM_onehot_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.829     1.956    keyproc/clk_IBUF_BUFG
+    SLICE_X40Y12         FDSE                                         r  keyproc/FSM_onehot_state_reg[0]/C
+                         clock pessimism             -0.500     1.456    
+    SLICE_X40Y12         FDSE (Hold_fdse_C_D)         0.091     1.547    keyproc/FSM_onehot_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.547    
+                         arrival time                           1.760    
+  -------------------------------------------------------------------
+                         slack                                  0.213    
+
+Slack (MET) :             0.213ns  (arrival time - required time)
+  Source:                 keyproc/spaceTime/count1_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/FSM_onehot_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.318ns  (logic 0.186ns (58.452%)  route 0.132ns (41.548%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.956ns
+    Source Clock Delay      (SCD):    1.443ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.560     1.443    keyproc/spaceTime/clk_IBUF_BUFG
+    SLICE_X41Y12         FDRE                                         r  keyproc/spaceTime/count1_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y12         FDRE (Prop_fdre_C_Q)         0.141     1.584 f  keyproc/spaceTime/count1_reg[2]/Q
+                         net (fo=5, routed)           0.132     1.716    keyproc/spaceTime/count1[2]
+    SLICE_X40Y12         LUT6 (Prop_lut6_I2_O)        0.045     1.761 r  keyproc/spaceTime/FSM_onehot_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.761    keyproc/spaceTime_n_2
+    SLICE_X40Y12         FDRE                                         r  keyproc/FSM_onehot_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.829     1.956    keyproc/clk_IBUF_BUFG
+    SLICE_X40Y12         FDRE                                         r  keyproc/FSM_onehot_state_reg[1]/C
+                         clock pessimism             -0.500     1.456    
+    SLICE_X40Y12         FDRE (Hold_fdre_C_D)         0.092     1.548    keyproc/FSM_onehot_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.548    
+                         arrival time                           1.761    
+  -------------------------------------------------------------------
+                         slack                                  0.213    
+
+Slack (MET) :             0.221ns  (arrival time - required time)
+  Source:                 keyproc/morseCode_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            keyproc/led_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.327ns  (logic 0.141ns (43.141%)  route 0.186ns (56.859%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.959ns
+    Source Clock Delay      (SCD):    1.445ns
+    Clock Pessimism Removal (CPR):    0.478ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.562     1.445    keyproc/clk_IBUF_BUFG
+    SLICE_X39Y9          FDRE                                         r  keyproc/morseCode_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y9          FDRE (Prop_fdre_C_Q)         0.141     1.586 r  keyproc/morseCode_reg[5]/Q
+                         net (fo=5, routed)           0.186     1.772    keyproc/morseCode[5]
+    SLICE_X40Y8          FDRE                                         r  keyproc/led_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=297, routed)         0.832     1.959    keyproc/clk_IBUF_BUFG
+    SLICE_X40Y8          FDRE                                         r  keyproc/led_reg[5]/C
+                         clock pessimism             -0.478     1.481    
+    SLICE_X40Y8          FDRE (Hold_fdre_C_D)         0.070     1.551    keyproc/led_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.551    
+                         arrival time                           1.772    
+  -------------------------------------------------------------------
+                         slack                                  0.221    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDSE/C   n/a            1.000         10.000      9.000      SLICE_X44Y11   codecompare/FSM_onehot_state_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X44Y11   codecompare/FSM_onehot_state_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X44Y11   codecompare/FSM_onehot_state_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X44Y8    codecompare/waitTime/count3_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X44Y8    codecompare/waitTime/count3_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X46Y6    codecompare/waitTime/hb/count_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X46Y8    codecompare/waitTime/hb/count_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X46Y8    codecompare/waitTime/hb/count_reg[11]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X46Y9    codecompare/waitTime/hb/count_reg[12]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X44Y8    codecompare/waitTime/count3_reg[2]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X44Y8    codecompare/waitTime/count3_reg[3]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y8    codecompare/waitTime/hb/count_reg[10]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y8    codecompare/waitTime/hb/count_reg[11]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y9    codecompare/waitTime/hb/count_reg[12]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y7    codecompare/waitTime/hb/count_reg[4]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y7    codecompare/waitTime/hb/count_reg[5]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y7    codecompare/waitTime/hb/count_reg[6]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y7    codecompare/waitTime/hb/count_reg[7]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X46Y8    codecompare/waitTime/hb/count_reg[8]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X43Y12   codecompare/word_reg[5]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X42Y12   codecompare/word_reg[6]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X42Y12   codecompare/word_reg[7]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y16   east_db/debouncebeat/count_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y17   east_db/pipeline_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X38Y13   keyproc/hb1/count_reg[24]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X38Y14   keyproc/morseCodeWord_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X40Y14   keyproc/morseCodeWord_reg[10]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X41Y15   keyproc/morseCodeWord_reg[11]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X40Y14   keyproc/morseCodeWord_reg[12]/C
+
+
+

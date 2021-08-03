@@ -1,0 +1,453 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May 12 14:10:43 2020
+# Process ID: 5772
+# Current directory: C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.runs/synth_1
+# Command line: vivado.exe -log Morse_decoder_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Morse_decoder_TOP.tcl
+# Log file: C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.runs/synth_1/Morse_decoder_TOP.vds
+# Journal file: C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Morse_decoder_TOP.tcl -notrace
+Command: synth_design -top Morse_decoder_TOP -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11444 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 835.074 ; gain = 234.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Morse_decoder_TOP' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/Morse_decoder_TOP.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'heartbeat' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+	Parameter TOPCOUNT bound to: 20000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'heartbeat' (1#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (2#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/debouncer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sevenSegmentDisp' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/sevenSegmentDisp.v:23]
+INFO: [Synth 8-6157] synthesizing module 'heartbeat__parameterized0' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+	Parameter TOPCOUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'heartbeat__parameterized0' (2#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+INFO: [Synth 8-226] default block is never used [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/sevenSegmentDisp.v:54]
+INFO: [Synth 8-6157] synthesizing module 'sevenSegmentDecoder' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/new/sevenSegmentDecoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sevenSegmentDecoder' (3#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/new/sevenSegmentDecoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sevenSegmentDisp' (4#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/sevenSegmentDisp.v:23]
+INFO: [Synth 8-6157] synthesizing module 'keyProcessor' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/keyProcessor.v:23]
+	Parameter DIT bound to: 2'b01 
+	Parameter DAH bound to: 2'b10 
+	Parameter IDLE bound to: 2'b00 
+	Parameter MEASURE bound to: 2'b01 
+	Parameter TRANSLATE bound to: 2'b10 
+	Parameter READY bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'heartbeat__parameterized1' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+	Parameter TOPCOUNT bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'heartbeat__parameterized1' (4#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/Activity1/heartbeat.v:5]
+INFO: [Synth 8-6157] synthesizing module 'waitCounter' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/waitCounter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'waitCounter' (5#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/waitCounter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'keyProcessor' (6#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/keyProcessor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'code_comparator' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:23]
+	Parameter WAIT bound to: 2'b00 
+	Parameter CHECK bound to: 2'b10 
+	Parameter DONE bound to: 2'b01 
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (7#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:58]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'code_comparator' (8#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Morse_decoder_rom' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/Morse_decoder_rom.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Morse_decoder_rom' (9#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/Morse_decoder_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FSM_letter' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/FSM_letter.v:23]
+	Parameter IDLE bound to: 2'b00 
+	Parameter CODE_CHECK bound to: 2'b01 
+	Parameter DISP bound to: 2'b10 
+	Parameter CLOSE bound to: 2'b11 
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/FSM_letter.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'FSM_letter' (10#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/FSM_letter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Morse_decoder_TOP' (11#1) [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/Morse_decoder_TOP.v:23]
+WARNING: [Synth 8-3331] design FSM_letter has unconnected port clk
+WARNING: [Synth 8-3331] design FSM_letter has unconnected port done
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 907.738 ; gain = 307.219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 907.738 ; gain = 307.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 907.738 ; gain = 307.219
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 907.738 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc]
+Finished Parsing XDC File [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Morse_decoder_TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Morse_decoder_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1029.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1029.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'keyProcessor'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'code_comparator'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                 MEASURE |                             0010 |                               01
+               TRANSLATE |                             0100 |                               10
+                   READY |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'keyProcessor'
+WARNING: [Synth 8-327] inferring latch for variable 'addr_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:81]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_nextstate_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextstate_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:60]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                              001 |                               00
+                   CHECK |                              010 |                               10
+                    DONE |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'code_comparator'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_nextstate_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'found_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'done_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'next_reg' [C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.srcs/sources_1/new/code_comparator.v:46]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module sevenSegmentDisp 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   3 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module waitCounter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+Module keyProcessor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 7     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+Module code_comparator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (codecompare/done_reg) is unused and will be removed from module Morse_decoder_TOP.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++--------------------+---------------------------------------+---------------+----------------+
+|Module Name         | RTL Object                            | Depth x Width | Implemented As | 
++--------------------+---------------------------------------+---------------+----------------+
+|sevenSegmentDecoder | ssd                                   | 32x8          | LUT            | 
+|Morse_decoder_rom   | data                                  | 32x8          | LUT            | 
+|Morse_decoder_TOP   | sevensegDisp/inst_sevenSegmentDec/ssd | 32x8          | LUT            | 
+|Morse_decoder_TOP   | memory/data                           | 32x8          | LUT            | 
++--------------------+---------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    23|
+|3     |LUT1   |     7|
+|4     |LUT2   |    15|
+|5     |LUT3   |    14|
+|6     |LUT4   |    12|
+|7     |LUT5   |    34|
+|8     |LUT6   |    40|
+|9     |FDRE   |   152|
+|10    |FDSE   |     8|
+|11    |LD     |    10|
+|12    |IBUF   |     6|
+|13    |OBUF   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------------------+------+
+|      |Instance         |Module                      |Cells |
++------+-----------------+----------------------------+------+
+|1     |top              |                            |   342|
+|2     |  codecompare    |code_comparator             |    48|
+|3     |    inst_count   |counter                     |    10|
+|4     |  db             |debouncer                   |    30|
+|5     |    debouncebeat |heartbeat                   |    24|
+|6     |  keyproc        |keyProcessor                |   180|
+|7     |    hb1          |heartbeat__parameterized1   |    43|
+|8     |    spaceTime    |waitCounter                 |    65|
+|9     |      hb         |heartbeat__parameterized1_0 |    49|
+|10    |  sevensegDisp   |sevenSegmentDisp            |    57|
+|11    |    inst_beat    |heartbeat__parameterized0   |    29|
++------+-----------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1029.984 ; gain = 307.219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.984 ; gain = 429.465
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1029.984 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1029.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  LD => LDCE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1029.984 ; gain = 722.410
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1029.984 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_1/Assignment_level_1/Assignment_level_1.runs/synth_1/Morse_decoder_TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Morse_decoder_TOP_utilization_synth.rpt -pb Morse_decoder_TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 12 14:11:16 2020...

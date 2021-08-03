@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sources_1/new/Morse_decoder_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Morse_decoder_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sources_1/new/code_comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module code_comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sources_1/imports/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sources_1/imports/Activity1/heartbeat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module heartbeat
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sources_1/new/waitCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module waitCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Gia Duy/Documents/Basys3_project/Assignment_level_2/Assignment_level_2/Assignment_level_2.srcs/sim_1/imports/Lab 5 resources/TB_comp_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_comp_mem
